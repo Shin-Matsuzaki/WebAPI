@@ -8,6 +8,10 @@ def main():
     response = requests.get(url)
     res_list = response.json()['results'][0]
 
+    address = str()
+    #for add in res_list.values()[0:3]:
+    #   address += add
+
     # 出力
     address = f'{res_list["address1"]} {res_list["address2"]} {res_list["address3"]}'
     print(address)
